@@ -14,18 +14,27 @@ public class Valuta {
 		return kursValute;
 	}
 	public void setKursValute(LinkedList<Kurs> kursValute) {
+		if(kursValute.isEmpty())
+			System.out.println("Lista kurseva valute je prazna!");
+		
 		this.kursValute = kursValute;
 	}
 	public String getNazivValute() {
 		return nazivValute;
 	}
 	public void setNazivValute(String nazivValute) {
+		if(nazivValute == null || nazivValute.isEmpty())
+			throw new RuntimeException("Naziv valute ne sme biti null ili prazan string!");
+		
 		this.nazivValute = nazivValute;
 	}
 	public String getKraciNazivValute() {
 		return kraciNazivValute;
 	}
 	public void setKraciNazivValute(String kraciNazivValute) {
+		if(kraciNazivValute == null || kraciNazivValute.isEmpty() || kraciNazivValute.length() != 3)
+			throw new RuntimeException("Kraci naziv valute mora biti string od tacno 3 slovna znaka!");
+		
 		this.kraciNazivValute = kraciNazivValute;
 	}
 	@Override
