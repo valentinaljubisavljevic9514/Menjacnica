@@ -2,12 +2,14 @@ package impementacija;
 
 import java.util.GregorianCalendar;
 
+
 import interfejs.InterfejsMenjacnice;
 import kursevi.Kurs;
 import valuta.Valuta;
 
 public class Menjacnica implements InterfejsMenjacnice {
 
+	
 
 
 		@Override
@@ -17,7 +19,12 @@ public class Menjacnica implements InterfejsMenjacnice {
 			
 			valuta.getKursValute().addLast(kurs);
 
+
 		}
+
+		
+		
+	
 
 		@Override
 		public void obrisiKurs(Valuta valuta, Kurs kurs) {
@@ -41,6 +48,9 @@ public class Menjacnica implements InterfejsMenjacnice {
 			
 			return null;
 		}
+
+	
+
 
 }
 
